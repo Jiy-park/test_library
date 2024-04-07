@@ -4,6 +4,21 @@ plugins {
     id("maven-publish")
 }
 
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.Jiy-park"
+            artifactId = "test-lib"
+            version = "0.0.1"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
+
 android {
     namespace = "com.dd2d.library1"
     compileSdk = 34
@@ -31,6 +46,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    resourcePrefix = "ttttest_"
 }
 dependencies {
 
@@ -41,6 +57,3 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
-
-version = "0.0.1"
-group = "com.github.Jiy-park"
