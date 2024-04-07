@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="none_string">아무것도 없어</string>
-
-    <string name="public_set">퍼블릭으로 감싼것</string>
-    <public name="public_set" type="string"/>
-</resources>
