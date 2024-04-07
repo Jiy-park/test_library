@@ -4,7 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-
 publishing {
     publications {
         register<MavenPublication>("release") {
